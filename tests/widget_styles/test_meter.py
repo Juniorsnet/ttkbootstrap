@@ -19,7 +19,9 @@ ttk.Meter(
     metersize=180,
     padding=5,
     amountused=25,
+    amountformat="{:0.1f}",
     metertype='semi',
+
     subtext='miles per hour',
     interactive=True
 ).pack(side=tk.LEFT)
@@ -54,16 +56,28 @@ ttk.Meter(
     metersize=180,
     padding=5,
     amounttotal=280,
+    meterthickness=50,
     arcrange=180,
     arcoffset=-180,
     amountused=75,
     textright='°',
     subtext='heat temperature',
-    wedgesize=5,
+    wedgesize=10,
     bootstyle='danger',
     interactive=True
 ).pack(side=tk.LEFT)
 
+meter = ttk.Meter(
+    metersize = 100,
+    padding = 10,
+    amountused = 10,
+    metertype = "semi",
+    subtext = "Miles per hour",
+    interactive = True,
+    amounttotal = 100
+)
+meter.step(-50)
+meter.pack(side=tk.LEFT)
 # btn = ttk.Button(text="Change Theme", command=change_style)
 # btn.grid(row=3, column=0, columnspan=2, padx=10, pady=10)
 
